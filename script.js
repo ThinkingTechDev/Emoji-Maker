@@ -2,7 +2,7 @@ const title = document.querySelector("h2");
 const buttonsContainer = document.querySelector(".buttons-container");
 const emojiContainer = document.querySelector("#emoji-container");
 
-const colors = ["#4bff81", "#4bb4ff", "#ff702e", "#b88cff", "#ffd21f"];
+const colors = ["#ffd21f", "#4bff81", "#4bb4ff", "#ff702e", "#b88cff"];
 
 const emojiParts = {
     eyebrows: 4,
@@ -32,13 +32,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const updateEmoji = (part) => {
     if (part === "color") {
-        emojiContainer.style.backgroundColor = colors[counters.color];
         counters.color = (counters.color + 1) % colors.length;
+        emojiContainer.style.backgroundColor = colors[counters.color];
     } else {
         const partElement = document.querySelector(`.${part}`);
         if (partElement) {
-            partElement.src = `./images/${part}-${counters[part]}.svg`;
             counters[part] = (counters[part] + 1) % emojiParts[part];
+            partElement.src = `./images/${part}-${counters[part]}.svg`;
         }
     }
 };
