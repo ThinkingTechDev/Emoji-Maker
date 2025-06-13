@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     customizationOptions.map((part) => {
         const button = document.createElement("button");
-        button.textContent = `${part}`;
+        button.textContent = part;
         button.addEventListener("click", () => updateEmoji(part));
         buttonsContainer.appendChild(button);
     });
