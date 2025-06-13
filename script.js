@@ -15,7 +15,7 @@ const counters = { color: 0, eyes: 0, eyebrows: 0, mouth: 0 };
 document.addEventListener("DOMContentLoaded", () => {
     title.textContent = "Emoji Maker";
 
-    const emojiPartsKeys = Object.keys(emojiParts)
+    const emojiPartsKeys = Object.keys(emojiParts);
 
     emojiPartsKeys.forEach((part) => {
         const img = document.createElement("img");
@@ -24,7 +24,9 @@ document.addEventListener("DOMContentLoaded", () => {
         emojiContainer.appendChild(img);
     });
 
-    ["color", ...emojiPartsKeys].forEach((part) => {
+    const customizationOptions = Object.keys(counters);
+
+    customizationOptions.forEach((part) => {
         const button = document.createElement("button");
         button.textContent = `${part}`;
         button.addEventListener("click", () => updateEmoji(part));
