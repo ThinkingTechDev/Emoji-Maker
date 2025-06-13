@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const customizationOptions = Object.keys(counters);
 
-    customizationOptions.forEach((part) => {
+    customizationOptions.map((part) => {
         const button = document.createElement("button");
         button.textContent = `${part}`;
         button.addEventListener("click", () => updateEmoji(part));
