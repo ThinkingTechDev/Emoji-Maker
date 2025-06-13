@@ -15,14 +15,16 @@ const counters = { color: 0, eyes: 0, eyebrows: 0, mouth: 0 };
 document.addEventListener("DOMContentLoaded", () => {
     title.textContent = "Emoji Maker";
 
-    Object.keys(emojiParts).forEach((part) => {
+    const emojiPartsKeys = Object.keys(emojiParts)
+
+    emojiPartsKeys.forEach((part) => {
         const img = document.createElement("img");
         img.classList.add(part);
         img.src = `./images/${part}-0.svg`;
         emojiContainer.appendChild(img);
     });
 
-    ["color", ...Object.keys(emojiParts)].forEach((part) => {
+    ["color", ...emojiPartsKeys].forEach((part) => {
         const button = document.createElement("button");
         button.textContent = `${part}`;
         button.addEventListener("click", () => updateEmoji(part));
