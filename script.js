@@ -24,9 +24,9 @@ document.addEventListener("DOMContentLoaded", () => {
         emojiContainer.appendChild(img);
     });
 
-    const customizationOptions = Object.keys(counters);
+    const countersKeys = Object.keys(counters);
 
-    customizationOptions.map((part) => {
+    countersKeys.map((part) => {
         const button = document.createElement("button");
         button.textContent = part;
         button.addEventListener("click", () => updateEmoji(part));
