@@ -1,5 +1,5 @@
 const title = document.querySelector("h2");
-const buttonsContainer = document.querySelector("buttons-container");
+const buttonsContainer = document.querySelector(".buttons-container");
 const emojiContainer = document.querySelector("#emoji-container");
 
 const colors = ["#ffd21f", "#4bff81", "#4bb4ff", "#ff702e", "#b88cff"];
